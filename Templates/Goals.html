@@ -1,0 +1,22 @@
+<div ng-controller="goalsController">
+  <section style="height: 17rem;" id="goal-form">
+    <form>
+    <div class="form-control">
+      <label> Course Goal </label>
+      <input type="text" ng-model="goalinput" />
+    </label>
+    <button class="button" ng-click="submitform()">Add Goal</button>
+  </form>
+  </section>
+  <section id="goals">
+  <ul class="goal-list">
+    <li
+      class="goal-item"
+      ng-repeat="goal in goals"
+      ng-click="deleteHandler(goal.id)"
+    >
+      {{goal.text}}
+    </li>
+  </ul>
+  </section>
+</div>

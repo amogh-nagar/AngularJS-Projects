@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="Demo" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+				initial-scale=1.0"
+    />
+
+    <link
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="angular-route.min.js">
+    <link href="angular.min.js"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Uncaught ReferenceError in Angular</title>
+    <base href="/Project-1/index.html" />
+  </head>
+  <body ng-controller="IndexController">
+    <nav>
+      <ul class="nav">
+        <ul ng-if="signin">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="goals">Goals</a></li>
+        </ul>
+        <ul ng-show="!signin">
+          <li><a ui-sref="login" >Login</a></li>
+          <li><a ui-sref="signup" >Signup</a></li>
+        </ul>
+        <ul ng-show="signin" class="nav">
+          <li  ng-click="logout()" ><button class="logout">Logout</button></li>
+        </ul>
+      </ul?>
+    </nav>
+    
+    <ui-view></ui-view>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<div ng-controller="homeController" class="container">
+    <header>
+      <h1>WEATHER</h1>
+    </header>
+    <main style="width: 300px;display:flex;align-items:center;justify-content:center">
+      <input ng-model="cityName" class="input" type="text" />
+      <button style="width: 79px;top: 0;display: flex;align-items: center;border-radius: 6px;" ng-click="search()" class="button">Search</button>
+    </main>
+    <footer ng-show="showcnt">
+      <div class="tempinfo">
+        <img src="{{cityDetails.current.condition.icon}}" alt="Weather icon"/>
+    
+        <h3 style="margin-left: 10px;">Temp: <span class="temp">{{cityDetails.current.feelslike_c}}</span></h3>
+
+        <h4 style="margin-left: 10px;">City: <span class="feelslike">{{cityDetails.location.name}}</span></h4>
+        <h4 style="margin-left: 10px;">Country: <span class="feelslike">{{cityDetails.location.country}}</span></h4>
+        <p style="margin-left: 10px;">Visibility: <span class="min">{{cityDetails.current.vis_km}} Kms</span></p>
+        <p style="margin-left: 10px;">Pressure: <span class="pressure">{{cityDetails.current.pressure_in}}</span></p>
+        <p style="margin-left: 10px;">Wind: <span class="humidity">{{cityDetails.current.wind_kph}} Kph</span></p>
+      </div>
+    </footer>
+  </div>
